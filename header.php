@@ -1,9 +1,9 @@
 <?php 
 	session_start();
 
-	echo "<!DOCTYPE html>\n<html><head>";
 	require_once('function.php');
-
+	
+	echo "<!DOCTYPE html>\n<head>";
 	$userstr = ' (Guest)';
 
 	if (isset($_SESSION['user'])) 
