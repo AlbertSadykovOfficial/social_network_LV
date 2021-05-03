@@ -1,8 +1,11 @@
-<?php 
-	$dbhost = 'localhost';
+<?php
+#	Альтернатива указания имени хоста - IP хоста
+#	Такой вариант может пригодиться, если DNS не работает
+#	$dbhost = "172.21.0.2";
+	$dbhost = 'mysql-server-5.7';
 	$dbname = 'social_network_db';	// Должна быть создана
-	$dbuser = 'albert';
-	$dbpass = 'pass';
+	$dbuser = 'social_user';
+	$dbpass = 'social_pass';
 
 	$appname = 'social_network'; // Название соц сети
 

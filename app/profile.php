@@ -30,7 +30,7 @@
 				
 		if (isset($_FILES['image']['name']))
 		{
-				$saveto = "$user.jpg";
+				$saveto = "tmp/$user.jpg";
 				move_uploaded_file($_FILES['image']['tmp_name'], $saveto);
 				$typeok = TRUE;
 
@@ -80,9 +80,12 @@
 						$tmp = imagecreatetruecolor($tw, $th);			// созданине новой пустой картинки
 						imagecopyresampled($tmp, $src, 0, 0, 0, 0, $tw, $th, $w, $h);
 						imageconvolution($tmp, array(array(-1,-1,-1), array(-1, 16, -1), array(-1, -1, -1)), 8, 0);	// Повышение резкости
-						imagejpeg($tmp, 'img/'.$saveto);
+						imagejpeg($tmp, "img/$user.jpg");
 						imagedestroy($tmp);
 						imagedestroy($src);
+						# Delete template file
+						unlink("tmp/$user.jpg");
+	
 				}
 		}
 
