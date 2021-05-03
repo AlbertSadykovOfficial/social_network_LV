@@ -53,17 +53,20 @@ sudo cat /home/kali/projects/social_network/setup.sql | sudo docker exec -i mysq
 1) Файл `app/function.php`
 
 Подключение PHP к MYSQL осуществляется по имени контейнера:
-     ```sh
-    $dbhost = 'mysql-server-5.7';
-     ```
+
+```sh
+$dbhost = 'mysql-server-5.7';
+```
     Если контейнер не работает должным образом, то проблема может заключаться в неправильном функционировании DNS, тогда `альтернативным вариантом имени MYSQL` хоста будет указание его `IP` к примеру:
-    ```sh
-    $dbhost = '172.21.0.2';
-     ```
+
+```sh
+$dbhost = '172.21.0.2';
+```
     Узнать точный IP MYSQL можно через `shell` команду:
-    ```sh
-    sudo docker inspect mysql-server-5.7 | grep IPAddress
-     ```
+
+```sh
+sudo docker inspect mysql-server-5.7 | grep IPAddress
+```
      (_Стоит учесть, что команду нужно запускать после запуска контейнера_)
      
 ## Зайти в контейнер
