@@ -12,6 +12,12 @@
 
 ____
 # _Развертывание через Docker:_
+## Скачать образ можно с GitHub (отсюда) или выгрузить его с Docker Hub:
+
+```sh
+sudo docker pull albertsadykovofficial/social_network:1.0
+```
+
 ## Подстройка параметров
 1) Файл `docker-compose.yml`:
 
